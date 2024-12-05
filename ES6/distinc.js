@@ -36,3 +36,5 @@
     const { name: fullName } = person;
     console.log(fullName); // 'John'
 }
+
+
