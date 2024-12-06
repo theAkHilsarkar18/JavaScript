@@ -5,3 +5,4 @@
 // toUpperCase()	Convert to uppercase	'HELLO'
 // trim()	Remove whitespace	'Hello, World!'
 // split()	Split a string into an array	['apple', 'banana']
+
