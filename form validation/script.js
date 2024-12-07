@@ -1,11 +1,11 @@
 function formValidation() {
-    const name = document.getElementById("name");
-    const email = document.getElementById("email");
-    const phone = document.getElementById("phone");
-    const c = document.getElementById("c");
-    const cpp = document.getElementById("cpp");
-    const dart = document.getElementById("dart");
-    const js = document.getElementById("js");
+    const name = document.getElementById("name").value.trim();
+    const email = document.getElementById("email").value.trim();
+    const phone = document.getElementById("phone").value.trim();
+    const c = document.getElementById("c").checked;
+    const cpp = document.getElementById("cpp").checked;
+    const dart = document.getElementById("dart").checked;
+    const js = document.getElementById("js").checked;
     const error = document.getElementById("error");
 
     error.innerHTML = "";
@@ -26,7 +26,7 @@ function formValidation() {
         return false;
     }
 
-    if (c && cpp && dart && js) {
+    if (!c && !cpp && !dart && !js) {
         error.innerHTML += "Select at least one skill!<br>"
         return false;
     }
