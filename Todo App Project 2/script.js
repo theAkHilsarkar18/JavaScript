@@ -16,7 +16,16 @@ button.addEventListener(
 
 
 function display() {
-    listDiv.innerHTML = "";
+    listDiv.innerHTML = "
+    
+    
+    
+    
+    
+    
+    
+    
+    ";
     todoList.forEach((e) => {
         const task = document.createElement("div");
         const deleteButton = document.createElement("button");
