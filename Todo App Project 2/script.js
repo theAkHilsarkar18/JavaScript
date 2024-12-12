@@ -16,24 +16,14 @@ button.addEventListener(
 
 
 function display() {
-    listDiv.innerHTML = "
-    
-    
-    
-    
-    
-    
-    
-    
-    ";
+    listDiv.innerHTML = "";
     todoList.forEach((e) => {
         const task = document.createElement("div");
-        const deleteButton = document.createElement("button");
-        deleteButton.setAttribute('id', 'deleteButton');
         console.log(e);
-        task.innerHTML = "<p>" + e + "</p>";
+        task.innerHTML = "<p>" + e + " <button type='submit' id='delButton'>Delete</button></p>";
         listDiv.appendChild(task);
     });
 }
+
 
 display();
