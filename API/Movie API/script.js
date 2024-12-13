@@ -17,5 +17,4 @@ function searchMovie(movie)
     }).catch((err)=>{
         console.log(err)
     })
-    
 }
