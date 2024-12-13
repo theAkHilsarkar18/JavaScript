@@ -10,7 +10,6 @@ button.addEventListener(
 
         const taskvalue = task.value
         todoList.push(taskvalue)
-
         console.log(todoList)
 
     }
