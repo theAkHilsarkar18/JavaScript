@@ -1,20 +1,18 @@
-
+//https://www.omdbapi.com/?i=tt3896198&apikey=bb11e0e8&t=pushpa
 const button = document.getElementById("button");
 
 button.addEventListener(
     'click',
-    (e)=>{
+    (e) => {
         const search = document.getElementById("search").value.trim();
-        searchMovie(search);
+        const api = "https://www.omdbapi.com/?i=tt3896198&apikey=bb11e0e8&t=${search}";
+        fetch(api).then(
+            (response) => {
+                if (!response.ok) {
+                    console.log("API Cant call !");
+                }
+            }
+        );
+
     }
 );
-
-function searchMovie(movie)
-{
-    fetch(`https://omdbapi.com/?i=tt3896198&apikey=bb11e0e8&s=${movie}`).then((res)=>res.json())
-    .then((data)=>{
-        console.log(data)
-    }).catch((err)=>{
-        console.log(err)
-    })
-}
